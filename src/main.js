@@ -10,11 +10,11 @@ Vue.use(VueRouter)
 
 // 路由组件这里是
 // 导入英雄列表组件
-import HeroList from './views/heroList.vue'
+import HeroList from './views/heroList/heroList.vue'
 // 导入武器列表组件
-import ArmsList from  './views/armsList.vue'
+import ArmsList from  './views/armsList/armsList.vue'
 // 导入装备列表组件
-import EquipmentList from './views/equipmentList.vue'
+import EquipmentList from './views/equipmentList/equipmentList.vue'
 
 const router = new VueRouter({
   routes: [

@@ -14,6 +14,9 @@ import ArmsList from  '../../views/armsList/armsList.vue'
 // 导入装备列表组件
 import EquipmentList from '../../views/equipmentList/equipmentList.vue'
 
+// 导入添加列表功能
+import HeroAdd from '../../views/heroList/heroAdd.vue'
+
 const router = new VueRouter({
     linkActiveClass: 'active',
   routes: [
@@ -35,6 +38,11 @@ const router = new VueRouter({
       name:'equipment',
       path:'/equipmentList',
       component:EquipmentList
+    }
+    ,   {
+      name:'heroAdd',
+      path:'/heroList/add',
+      component:HeroAdd
     }
   ]
 })

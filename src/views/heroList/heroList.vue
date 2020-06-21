@@ -1,7 +1,8 @@
 <template>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="sub-header">Hero List</h2>
-          <a class="btn btn-success" href="add.html">Add</a>
+          
+          <router-link to="/heroList/add" class="btn btn-success">add</router-link>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
@@ -66,7 +67,7 @@ export default {
        .then(res=>{
          alert(res+'删除成功')
          //更新视图
-        //  this.loadData()
+         this.loadData()
        })
        .catch(err=>{
          alert('服务器错误'+err)

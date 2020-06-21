@@ -3,6 +3,9 @@ import App from './App.vue' // 导入视图
 
 Vue.config.productionTip = false // 不知道什么意思？？？
 
+// 设置全局的axios
+import axios from 'axios'
+Vue.prototype.axios = axios
 //导入路由模块
 import router from './views/router/router.js'
 

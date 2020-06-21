@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+
 
 export default {
     data(){
@@ -36,7 +36,7 @@ export default {
     },
     methods:{
         add(){
-            axios.post('http://localhost:3000/users',this.formDate)
+            this.axios.post('http://localhost:3000/users',this.formDate)
             .then(res=>{
                 const {status} = res
                 if(status==201){

@@ -23,7 +23,9 @@
                   <td>{{value.age}}</td>
                   <td>{{value.gender}}</td>
                   <td>
-                    <a href="edit.html">编辑</a>
+                    <!-- <a href="edit.html">编辑</a> -->
+                  <router-link :to="{name:'heroEdit',params:{id:value.id}}" >编辑</router-link>
+                 
                     &nbsp;&nbsp;
                     <a href="javascript:window.confirm('Are you sure?')" @click=del(value.id)>删除</a>
                   </td>

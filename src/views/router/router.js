@@ -16,7 +16,8 @@ import EquipmentList from '../../views/equipmentList/equipmentList.vue'
 
 // 导入添加列表功能
 import HeroAdd from '../../views/heroList/heroAdd.vue'
-
+//导入编辑列表功能
+import HeroEdit from '../../views/heroList/heroEdit.vue'
 const router = new VueRouter({
     linkActiveClass: 'active',
   routes: [
@@ -43,6 +44,11 @@ const router = new VueRouter({
       name:'heroAdd',
       path:'/heroList/add',
       component:HeroAdd
+    },
+    {
+      name:'heroEdit',
+      path:'/heroList/edit/:id',
+      component:HeroEdit
     }
   ]
 })

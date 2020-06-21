@@ -55,7 +55,7 @@ export default {
         if(status==200){
          
           this.list = data
-          console.log(this.list)
+          // console.log(this.list)
         }else{
           alert('获取数据失败')
         }

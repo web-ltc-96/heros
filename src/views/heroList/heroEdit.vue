@@ -28,6 +28,7 @@
 import axios from 'axios'
 
 export default {
+    props:['id'],
     data(){
         return{
             formDate:{
@@ -38,13 +39,27 @@ export default {
             }
         }
     },
+    created() {
+        this.loadDated()
+    },
     methods:{
+        loadDated(){
+             axios.get('http://localhost:3000/users/'+this.id)
+             .then(res=>{
+                 console.log(res)
+                 this.formDate = res.data
+             })
+        },
         edit(){
-            axios.put('http://localhost:3000/users/'+this.$route.params.id,this.formDate)
+            axios.put('http://localhost:3000/users/'+this.id,this.formDate)
             .then(res=>{
                
-                    console.log(res)
-                    this.$router.push({name:'hero'})
+                    // console.log(res)
+                    const {status} = res
+                    if(status===200){
+ this.$router.push({name:'hero'})
+                    }
+                   
                
             })
             // console.log(this.$route.params.id)

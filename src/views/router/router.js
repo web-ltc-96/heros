@@ -48,7 +48,7 @@ const router = new VueRouter({
     {
       name:'heroEdit',
       path:'/heroList/edit/:id',
-      component:HeroEdit
+      component:HeroEdit ,props:true
     }
   ]
 })

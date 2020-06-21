@@ -47,7 +47,7 @@ export default {
    },
    methods:{
      loadData: function(){
-      this.axios.get('http://localhost:3000/users')
+      this.axios.get('/users')
        .then((res)=>{
         
         const {data, status}= res
@@ -64,7 +64,7 @@ export default {
        })
      },
      del(id){
-       this.axios.delete('http://localhost:3000/users/'+ id)
+       this.axios.delete('/users/'+ id)
        .then(res=>{
          alert(res+'删除成功')
          //更新视图

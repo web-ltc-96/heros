@@ -44,14 +44,14 @@ export default {
     },
     methods:{
         loadDated(){
-             this.axios.get('http://localhost:3000/users/'+this.id)
+             this.axios.get('/users/'+this.id)
              .then(res=>{
                  console.log(res)
                  this.formDate = res.data
              })
         },
         edit(){
-            this.axios.put('http://localhost:3000/users/'+this.id,this.formDate)
+            this.axios.put('/users/'+this.id,this.formDate)
             .then(res=>{
                
                     // console.log(res)

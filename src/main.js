@@ -5,7 +5,13 @@ Vue.config.productionTip = false // 不知道什么意思？？？
 
 // 设置全局的axios
 import axios from 'axios'
+// axios.create({
+//   baseURL: 'http://localhost:3000'
+// }); 不行
+axios.defaults.baseURL = 'http://localhost:3000';
 Vue.prototype.axios = axios
+// 配置线上的默认地址
+
 //导入路由模块
 import router from './views/router/router.js'
 

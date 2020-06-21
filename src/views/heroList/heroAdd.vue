@@ -36,7 +36,7 @@ export default {
     },
     methods:{
         add(){
-            this.axios.post('http://localhost:3000/users',this.formDate)
+            this.axios.post('/users',this.formDate)
             .then(res=>{
                 const {status} = res
                 if(status==201){

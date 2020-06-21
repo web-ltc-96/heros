@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+
 
 export default {
     props:['id'],
@@ -44,14 +44,14 @@ export default {
     },
     methods:{
         loadDated(){
-             axios.get('http://localhost:3000/users/'+this.id)
+             this.axios.get('http://localhost:3000/users/'+this.id)
              .then(res=>{
                  console.log(res)
                  this.formDate = res.data
              })
         },
         edit(){
-            axios.put('http://localhost:3000/users/'+this.id,this.formDate)
+            this.axios.put('http://localhost:3000/users/'+this.id,this.formDate)
             .then(res=>{
                
                     // console.log(res)

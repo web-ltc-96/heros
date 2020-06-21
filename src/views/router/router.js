@@ -15,6 +15,7 @@ import ArmsList from  '../../views/armsList/armsList.vue'
 import EquipmentList from '../../views/equipmentList/equipmentList.vue'
 
 const router = new VueRouter({
+    linkActiveClass: 'active',
   routes: [
     {
       path:'',redirect:'/heroList'

@@ -5,7 +5,7 @@
             <!-- <li><a href="#">Reports</a></li>
             <li><a href="#">Analytics</a></li>
             <li><a href="#">Export</a></li> -->
-            <router-link :to="{name:'hero'}" tag="li" class='active'>
+            <router-link :to="{name:'hero'}" tag="li">
                 <a>英雄列表</a>
             </router-link>
             <router-link :to="{name:'arms'}" tag="li">

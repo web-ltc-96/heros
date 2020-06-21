@@ -38,7 +38,8 @@
 </template>
 <script>
 
-
+// 导入axios
+import axios from 'axios'
 export default {
    data(){
      return{
@@ -47,7 +48,7 @@ export default {
    },
    methods:{
      loadData: function(){
-      this.axios.get('http://localhost:3000/users')
+       axios.get('http://localhost:3000/users')
        .then((res)=>{
         
         const {data, status}= res
@@ -64,7 +65,7 @@ export default {
        })
      },
      del(id){
-       this.axios.delete('http://localhost:3000/users/'+ id)
+       axios.delete('http://localhost:3000/users/'+ id)
        .then(res=>{
          alert(res+'删除成功')
          //更新视图

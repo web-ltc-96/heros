@@ -14,18 +14,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1,001</td>
-                 
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                  <td>
-                    <a href="edit.html">编辑</a>
-                    &nbsp;&nbsp;
-                    <a href="javascript:window.confirm('Are you sure?')">删除</a>
-                  </td>
-                </tr>
+                
                 <tr v-for="(value,index) in list" :key=index>
                    <td>{{value.id}}</td>
                  
@@ -35,7 +24,7 @@
                   <td>
                     <a href="edit.html">编辑</a>
                     &nbsp;&nbsp;
-                    <a href="javascript:window.confirm('Are you sure?')">删除</a>
+                    <a href="javascript:window.confirm('Are you sure?')" @click=del(value.id)>删除</a>
                   </td>
                 </tr>
 
@@ -70,6 +59,17 @@ export default {
        })
        .catch((err)=>{
          alert(err+'服务器异常')
+       })
+     },
+     del(id){
+       axios.delete('http://localhost:3000/users/'+ id)
+       .then(res=>{
+         alert(res+'删除成功')
+         //更新视图
+        //  this.loadData()
+       })
+       .catch(err=>{
+         alert('服务器错误'+err)
        })
      }
    },
